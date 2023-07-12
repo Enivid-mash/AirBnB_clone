@@ -8,6 +8,11 @@ class BaseModel:
     """This is the base class that defines all common attributes
     and methids of all other classes that will inherit from it"""
     def __init__(self):
+        """This is the base model instance
+        Attributes:
+            id: unique random id
+            created_at: creation date
+            updated_at: updated date"""
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
