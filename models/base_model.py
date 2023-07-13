@@ -2,6 +2,7 @@
 """This is the base model class for AirBnB"""
 import uuid
 from datetime import datetime
+import models
 
 
 class BaseModel:
@@ -47,6 +48,8 @@ class BaseModel:
     def save(self):
         """updates the public instance attribute updated_to to current"""
         self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """Creates a dictionary of the class
@@ -57,3 +60,7 @@ class BaseModel:
         obj_dict['created_at'] = self.created_at.isoformat()
         obj_dict['updated_at'] = self.updated_at.isoformat()
         return obj_dict
+
+    def delete(self):
+        """deletes object"""
+        models.storage.delete(self)
