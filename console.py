@@ -3,13 +3,19 @@
 import cmd
 from shlex import split
 from models.base_model import BaseModel
+from models.user import User
+from models.city import City
+from models.state import State
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
 from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
     """Represents the hbnb console"""
     prompt = "(hbnb) "
-    the_classes = {"BaseModel"}
+    the_classes = {"BaseModel", "User", "City", "State", "Place", "Amenity"}
 
     def emptyline(self):
         """This ignores empty spaces"""
