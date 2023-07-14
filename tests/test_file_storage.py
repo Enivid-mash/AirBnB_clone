@@ -32,3 +32,13 @@ class TestFileStorage(unittest.TestCase):
     def test_all(self):
         """test when is created"""
         storage = FileStorage()
+        obj = storage.all()
+        self.assertIsNotNone(obj)
+        self.assertEqual(type(obj), dict)
+        self.assertIs(obj, storage._FileStorage__objects)
+
+    def test_reload_filestorage(self):
+        self.storage.save()
+
+if __name__ == "__main__":
+    unittest.main()
