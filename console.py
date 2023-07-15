@@ -15,7 +15,8 @@ from models import storage
 class HBNBCommand(cmd.Cmd):
     """Represents the hbnb console"""
     prompt = "(hbnb) "
-    the_classes = {"BaseModel", "User", "City", "State", "Place", "Amenity", "Review"}
+    the_classes = {"BaseModel", "User", "City", "State",
+                   "Place", "Amenity", "Review"}
 
     def emptyline(self):
         """This ignores empty spaces"""
@@ -179,13 +180,30 @@ class HBNBCommand(cmd.Cmd):
         except NameError:
             print("** class doesn't exist **")
         except IndexError:
-            print("** no instance id missing **")
+            print("** instance id missing **")
         except KeyError:
             print("** no instance found **")
         except AttributeError:
             print("** attribute name missing **")
         except ValueError:
             print("** value missing**")
+
+    def count(self, line):
+        """retrieves the number of instances of a class
+        """
+        counting = 0
+        try:
+            the_list = split(line, " ")
+            if the_list[0] not in self.the_classes:
+                raise NameError()
+            obj = storage.all()
+            for key in obj:
+                name = key.split('.')
+                if name[0] == the_list[0]:
+                    counting += 1
+            print(counting)
+        except NameError:
+            print("** class doesn't exist **")
 
 
 if __name__ == '__main__':
