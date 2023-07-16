@@ -78,7 +78,8 @@ class TestConsole(unittest.TestCase):
             self.cons.onecmd("create abcder")
             self.assertEqual("** class doesn't exist **\n", f.getvalue())
         with patch('sys.stdout', new=StringIO()) as f:
-            self.cons.onecmd('create User email="njeri@yahoo.com" password="secret"')
+            self.cons.onecmd('create User email="njeri@yahoo.com"
+                             password="secret"')
         with patch('sys.stdout', new=StringIO()) as f:
             self.cons.onecmd("all User")
             self.assertEqual("[User]", f.getvalue()[:7])
@@ -112,7 +113,6 @@ class TestConsole(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             self.cons.onecmd("destroy BaseModel 987654")
             self.assertEqual("** no instance found **\n", f.getvalue())
-
 
     def test_destroy(self):
         """Test destroy command input"""
