@@ -7,7 +7,7 @@ import models
 
 class BaseModel:
     """This is the base class that defines all common attributes
-    and methids of all other classes that will inherit from it"""
+    and methods of all other classes that will inherit from it"""
     def __init__(self, *args, **kwargs):
         """This is the base model instance
         Args:
