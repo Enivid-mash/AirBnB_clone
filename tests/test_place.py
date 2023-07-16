@@ -66,7 +66,6 @@ class TestState(unittest.TestCase):
         self.assertTrue('latitude' in self.plc.__dict__)
         self.assertTrue('amenity_ids' in self.plc.__dict__)
 
-
     def test_is_subclass_Place(self):
         """tests if Place is a subclass of BaseModel"""
         self.assertTrue(issubclass(self.plc.__class__, BaseModel), True)
