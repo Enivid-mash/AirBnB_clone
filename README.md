@@ -1,25 +1,26 @@
+# AirBnB clone - The console
                                     (hbnb)
 
-- This is a command interpreter for managing objects on our airbnb project.
-- This console will create the data model, manage, that is create, update, destroy objects and store and persist objects to a file(JSON)
+#### This is a command interpreter for managing objects on our airbnb project.
+#### This console will create the data model, manage, that is create, update, destroy objects and store and persist objects to a file(JSON)
 
-- To start the console, use the (cd) command which changes, the directory to the project folder and execute or run it by typing this on your terminal ./console.py
+#### To start the console, use the (cd) command which changes, the directory to the project folder and execute or run it by typing this on your terminal ./console.py
 
-- After running the ./console.py there will be a (hbnb) prompt where you will type in your commands, for example our supported commands are:
+#### After running the ./console.py there will be a (hbnb) prompt where you will type in your commands, for example our supported commands are:
 
-. help - displays descriptions of all the supported commands
+. `help` - displays descriptions of all the supported commands
 
-. create - command that creates an object
+. `create` - command that creates an object
 
-. show - command that shows an object based on id
+. `show` - command that shows an object based on id
 
-. destroy - command that destroys an object
+. `destroy` - command that destroys an object
 
-. all - command that displays all the objects either of one or all types
+. `all` - command that displays all the objects either of one or all types
 
-. quit/EOF - EOF means end of file - This command quits the console.
+. `quit/EOF` - EOF means end of file - This command quits the console.
 
-- Examples of commands:
+### Examples of commands:
 (hbnb) help for example (hbnb) help
 
 (hbnb) create <classname> for exampe (hbnb) create BaseModel
