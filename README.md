@@ -21,17 +21,17 @@
 
 ### Examples of commands:
 ```
-(hbnb) `help` for example (hbnb) help
+(hbnb) help for example (hbnb) help
 
-(hbnb) `create` <classname> for exampe (hbnb) create BaseModel
+(hbnb) create <classname> for exampe (hbnb) create BaseModel
 
-(hbnb) `show` <classname><object id> for exampe (hbnb) show User my_id
+(hbnb) show <classname><object id> for exampe (hbnb) show User my_id
 
-(hbnb) `destroy` <classname><object id> for exampe (hbnb) destroy City my_city_id
+(hbnb) destroy <classname><object id> for exampe (hbnb) destroy City my_city_id
 
-(hbnb) `all` <classname> for exampe (hbnb) all State
+(hbnb) all <classname> for exampe (hbnb) all State
 
-(hbnb) `quit` for exampe (hbnb) quit or EOF
+(hbnb) quit for exampe (hbnb) quit or EOF
 ```
 
 ### The supported classes are:
